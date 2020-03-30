@@ -10,13 +10,12 @@ RSpec.describe 'Search for food items' do
     click_button "Search"
 
     expect(current_path).to eq(foods_path)
-
-    expect(page).to have_content("10 Results")
+    save_and_open_page
+    expect(page).to have_content("50 Total Results")
 
     expect(page).to have_css(".foods", count: 10)
 
     within(first(".foods")) do
-      expect(page).to have_css(".name")
       expect(page).to have_css(".upc")
       expect(page).to have_css(".description")
       expect(page).to have_css(".brand_owner")
