@@ -5,6 +5,5 @@ class SearchFacade
     food_info.map do |attributes|
       Food.new(attributes)
     end
-
   end
 end
