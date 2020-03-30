@@ -13,6 +13,15 @@ RSpec.describe 'Search for food items' do
 
     expect(page).to have_content("10 Results")
 
+    expect(page).to have_css(".foods", count: 10)
+
+    within(first(".foods")) do
+      expect(page).to have_css(".name")
+      expect(page).to have_css(".upc")
+      expect(page).to have_css(".description")
+      expect(page).to have_css(".brand_owner")
+      expect(page).to have_css(".ingredients")
+    end
   end
 end
 
