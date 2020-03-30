@@ -3,10 +3,10 @@
 <h3>Top 10 Results</h3>
 <% @foods[0..9].each do |food| %>
   <ul class="foods">
-    <p>UPC</p> <li class="upc"><%= food[:gtinUpc] %></li>
-    <p>Description</p><li class="description"><%= food[:description] %></li>
-    <p>BrandOwner</p><li class="brand_owner"><%= food[:brandOwner] %></li>
-    <p>Ingredients</p><li class="ingredients"><%= food[:ingredients] %></li>
+    <p>UPC</p> <li class="upc"><%= food.gtinUpc %></li>
+    <p>Description</p><li class="description"><%= food.description %></li>
+    <p>BrandOwner</p><li class="brand_owner"><%= food.brandOwner %></li>
+    <p>Ingredients</p><li class="ingredients"><%= food.ingredients %></li>
   </ul>
   <br>
 <% end %>
