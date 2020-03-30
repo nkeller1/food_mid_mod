@@ -23,6 +23,7 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'webmock'
+  gem 'launchy'
 end
 
 group :development do

@@ -5,7 +5,13 @@ RSpec.describe 'Search for food items' do
 
     visit '/'
 
-    
+    fill_in 'q', with: "Sweet Potatos"
+
+    click_button "Search"
+
+    expect(current_path).to eq(foods_path)
+
+    expect(page).to have_content("10 Results")
 
   end
 end

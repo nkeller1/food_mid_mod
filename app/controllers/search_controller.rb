@@ -1,5 +1,5 @@
-def SearchController < ApplicationController
+class SearchController < ApplicationController
   def index
-    
+
   end
 end
